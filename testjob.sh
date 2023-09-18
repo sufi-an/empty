@@ -16,8 +16,10 @@ if [ "$status" == "## main...origin/main" ]; then
 else
   pushStatus="$(git push  --porcelain)";
   if ["$pushStatus" == "Done"];then
-    echo" $pushStatus" >> ~/Desktop/cron_echo.txt
+    res="${pushStatus} Success"
+    echo $res >> ~/Desktop/cron_echo.txt
   else
-    echo "Failed" >> ~/Desktop/cron_echo.txt
+    res1="${pushStatus} Failed"
+    echo $res1 >> ~/Desktop/cron_echo.txt
   fi
 fi
