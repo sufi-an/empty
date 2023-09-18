@@ -14,7 +14,7 @@ echo $status >> ~/Desktop/cron_echo.txt
 if [ "$status" == "## main...origin/main" ]; then
   echo "IT IS CLEAN" >> ~/Desktop/cron_echo.txt
 else
-  pushStatus="$(git push -u origin main --porcelain)"
+  pushStatus="$(git push  --porcelain)"
   #if ["$pushStatus" == "Done"];then
   echo $pushStatus >> ~/Desktop/cron_echo.txt
   #else
