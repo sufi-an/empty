@@ -6,7 +6,7 @@ date=$(date +"%Y-%m-%d %T")
 # Commit message
 message="script for automating code backup to github using bash and crontab. Last updated $date"
 cd /home/d3c0d3/personal/gitBack
-echo $date > README.md
+echo $message > README.md
 #####
 
 #git remote set-url origin git@github.com:sufi-an/empty.git
@@ -19,7 +19,7 @@ echo $date > README.md
 #####
 
 git add .;
-git commit -m"${message}";
+git commit -m"${date}";
 #git commit -am "${message}" && git push origin main
 status="$(git status --branch --porcelain)";
 echo $status >> ~/Desktop/cron_echo.txt;
