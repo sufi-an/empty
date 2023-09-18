@@ -8,5 +8,5 @@ date >> README.md
 
 git add .
 git commit -m'commit backup $date'
-git push
+#git push
 echo "Hello World $dt" >> ~/Desktop/gitbkup.txt 
