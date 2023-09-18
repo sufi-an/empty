@@ -10,7 +10,7 @@ git add .
 git commit -m"${message}"
 status="$(git status --branch --porcelain)"
 echo $status >> ~/Desktop/cron_echo.txt
-if [ "$status" == "## master...origin/master" ]; then
+if [ "$status" == "## main...origin/main" ]; then
   echo "IT IS CLEAN" >> ~/Desktop/cron_echo.txt
 else
   git push -u origin main
