@@ -1,19 +1,18 @@
+#! /bin/bash
 
+# Date in format Day-Month-Year
+date=$(date +"%Y-%m-%d %T")
 
-#!/bin/bash
-dt="$(date)"
-cd /home/d3c0d3/personal/gitBack/
-
-date >> README.md
-
+# Commit message
+message="Commit for $date"
+cd /home/d3c0d3/personal/gitBack
 git add .
-git commit -m'commit backup $dt' 
-#git push >> ~/Desktop/gitbkup.txt
-if [[ "$(git push --porcelain)" == *"Done"* ]]
-then
-  echo "git push succeeded $dt" >> ~/Desktop/gitbkup.txt
+git commit -m"${message}"
+status="$(git status --branch --porcelain)"
+echo $status >> ~/Desktop/cron_echo.txt
+if [ "$status" == "## master...origin/master" ]; then
+  echo "IT IS CLEAN" >> ~/Desktop/cron_echo.txt
 else
-  echo "git push failed $dt" >> ~/Desktop/gitbkup.txt
+  echo "There is stuff to push" >> ~/Desktop/cron_echo.txt
+  git push -u origin main
 fi
-# git push -u origin main
-#echo "Hello World $dt" >> ~/Desktop/gitbkup.txt 
