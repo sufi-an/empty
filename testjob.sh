@@ -8,5 +8,5 @@ date >> README.md
 
 git add .
 git commit -m'commit backup'
-git push origin main
-#echo "Hello World" >> ~/Desktop/gitbkup.txt 
+git push
+echo "Hello World" >> ~/Desktop/gitbkup.txt 
