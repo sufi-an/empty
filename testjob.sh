@@ -31,7 +31,7 @@ else
     res="${pushStatus} Success"
     echo $res >> ~/Desktop/cron_echo.txt
   else
-    res1="${pushStatus} Failed"
+    res1="${pushStatus} Failed the job"
     echo $res1 >> ~/Desktop/cron_echo.txt
   fi
 fi
