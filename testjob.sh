@@ -13,5 +13,5 @@ echo $status >> ~/Desktop/cron_echo.txt
 if [ "$status" == "## main...origin/main" ]; then
   echo "IT IS CLEAN" >> ~/Desktop/cron_echo.txt
 else
-  git push -u origin main
+  gti push -u origin main
 fi
