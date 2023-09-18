@@ -16,5 +16,7 @@ else
   pushStatus="$(git push -u origin main --porcelain)"
   if ["$pushStatus"!="Done"];then
     echo "Failed" >> ~/Desktop/cron_echo.txt
-  echo $pushStatus >> ~/Desktop/cron_echo.txt
+  else
+    echo $pushStatus >> ~/Desktop/cron_echo.txt
+  fi
 fi
