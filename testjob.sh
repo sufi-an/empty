@@ -19,5 +19,5 @@ else
     echo" $pushStatus" >> ~/Desktop/cron_echo.txt
   else
     echo "Failed" >> ~/Desktop/cron_echo.txt
- # fi
+  fi
 fi
