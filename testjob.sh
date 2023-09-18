@@ -15,7 +15,7 @@ git fetch
 git branch -u origin/main
 git add .;
 git commit -m"${message}";
-git push
+git push --force
 #####
 
 #git add .;
