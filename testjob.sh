@@ -27,7 +27,7 @@ if [ "$status" == "## main...origin/main" ]; then
   echo "IT IS CLEAN" >> ~/Desktop/cron_echo.txt;
 else
   pushStatus="$(git push  --porcelain)";
-  if ["$pushStatus" == *"Done"*];then
+  if ["$pushStatus" == *"Done"];then
     res="${pushStatus} Success"
     echo $res >> ~/Desktop/cron_echo.txt
   else
