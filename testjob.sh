@@ -13,9 +13,5 @@ echo $status >> ~/Desktop/cron_echo.txt
 if [ "$status" == "## master...origin/master" ]; then
   echo "IT IS CLEAN" >> ~/Desktop/cron_echo.txt
 else
-  if [[ "$(git push --porcelain)" == *"Done"* ]]
-    echo "Success pushing code" >> ~/Desktop/cron_echo.txt
-  else
-    echo "Error " >> ~/Desktop/cron_echo.txt
-  fi
+  git push -u origin main
 fi
