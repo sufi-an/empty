@@ -9,7 +9,7 @@ date >> README.md
 git add .
 git commit -m'commit backup $dt' 
 
-if git push
+if [[ "$(git push --porcelain)" == *"Done"* ]]
 then
   echo "git push succeeded $dt" >> ~/Desktop/gitbkup.txt
 else
