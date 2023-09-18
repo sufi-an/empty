@@ -4,7 +4,7 @@
 date=$(date +"%Y-%m-%d %T")
 
 # Commit message
-message="# script for automating code backup to github using bash and crontab. Last updated $date"
+message="script for automating code backup to github using bash and crontab. Last updated $date"
 cd /home/d3c0d3/personal/gitBack
 echo $date > README.md
 #####
